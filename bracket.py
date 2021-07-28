@@ -44,3 +44,6 @@ def bracket(a,f,passo=0.001,mult=2):
 funcao = lambda x: x**2
 b = bracket(-2, funcao)
 print(b)
+
+#desvantagem: a taxa de acerto depende do passo
+# entao se tiver mais de um minimo, ele vai encontrar algum minimo, mas nao o melhor
