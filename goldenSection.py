@@ -2,7 +2,7 @@
 # a distancia entre a e b ao redor do minimo local. O metodo se
 #chama Golden Section Search Method
 #
-
+import math
 def golden_search(f,a,b,tol=1e-6):
   
   gr = (1 + math.sqrt(5))/2 #razao aurea
