@@ -49,6 +49,59 @@ O método elimina intervalos que não sejam possíveis conter o mínimo local at
 
 ![alt text](https://github.com/tiagosardi/optimizationMethod/blob/main/images/goldenSection.jpg)
 
+### Vantagem
+
+* Simples de implementar
+* A função não precisa ser contínua
+* Garante a convergência
+
+### Desvantagem
+
+* Só garante um mínimo local
+* Se baseia na existência de um intervalo inicial pré-definido
+
+### Algoritmo
+
+**Inicialização**
+
+* Entra com a função
+* Determina um intervalo [a,b]
+* Determina uma tolerância
+
+**Passo 1**
+
+* Determina dois pontos intermediários c e d tal que: 
+   
+   c = b + (b-a)/gr 
+
+   d = b - (b-a)/gr
+
+   Sendo gr a razão áurea.
+
+**Passo 2**
+
+Avalia f(c) e f(d)
+
+* Se f(c) > f(d), então determine novos a,c,d,b. Repare que o valor de c é calculado com a razão áurea:
+
+   a = d
+   d = c
+   c = a + (b-a)/gr
+   
+* Se f(c) < f(d), entao determine novos a,c,d,b. Repare que o valor de d é calculado com razão áurea:
+
+   b=c
+   c=d
+   d= b - (b-a)/gr
+
+   c = x1
+   d = x2
+   xl = a
+   xu = b
+
+**Passo 3**
+
+Se b-a < tolerância, então o extremo local possível é retornado no atual (a+b)/2 e a iteração para, caso contrário, volta ao passo 2
 
 ## Aproximação Quadrática
 Assumindo que a função seja quadrática, o método usa o teorema de fermat para encontrar o mínimo local, derivando a função em primeira ordem e igualando a zero. E a partir do cálculo do sistema linear, é possível descobrir o coeficiente angular, de forma que se possa chegar ao mínimo local. 
