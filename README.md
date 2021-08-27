@@ -28,7 +28,7 @@ Trata-se de algoritmos de busca do mínimo local de uma função.
 # Definições básicas
 
 ## Função unimodal
-uma função $\displaystyle{f(x)}$ é unimodal se, para algum valor $\displaystyle{m}$, ela cresce monotonamente para $\displaystyle {x}$ $\leq{m}$ e decresce monotonamente para $\displaystyle {x}$ $\geq {m}$. Nesse caso, o valor máximo de $\displaystyle {f(x)}$ é $\displaystyle{f(m)}$ e não existe nenhum outro máximo local.
+uma função \displaystyle{f(x)} é unimodal se, para algum valor \displaystyle{m}, ela cresce monotonamente para \displaystyle{x} \leq{m} e decresce monotonamente para \displaystyle{x} \geq {m}. Nesse caso, o valor máximo de \displaystyle{f(x)} é \displaystyle{f(m)} e não existe nenhum outro máximo local.
 
 # Problemas com 1 variável e sem restrições
 
@@ -41,7 +41,7 @@ Simples de implementar
 ### Desvantagem
 A taxa de acerto depende do passo.
 
-Se tiver mais de um mínimo, ele vai encontrar algum mínimo, mas nao o melhor
+Se tiver mais de um mínimo, ele vai encontrar algum mínimo, mas nao o melhor.
 
 
 ## Golden Section Search
