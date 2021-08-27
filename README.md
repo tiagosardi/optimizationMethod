@@ -47,7 +47,7 @@ Se tiver mais de um mínimo, ele vai encontrar algum mínimo, mas nao o melhor.
 ## Golden Section Search
 O método elimina intervalos que não sejam possíveis conter o mínimo local até que seja reduzida a distância entre o intervalo e assuma um valor aproximado para o mínimo local. O método também funciona apenas para função unimodal.
 
-![alt text](http://url/to/img.png)
+![alt text](https://github.com/tiagosardi/optimizationMethod/blob/main/images/goldenSection.jpg)
 
 
 ## Aproximação Quadrática
