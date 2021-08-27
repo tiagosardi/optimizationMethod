@@ -43,6 +43,39 @@ A taxa de acerto depende do passo.
 
 Se tiver mais de um mínimo, ele vai encontrar algum mínimo, mas nao o melhor.
 
+### Algoritmo
+
+**Inicialização**
+
+* ponto a
+* Função f
+* passo s
+* multiplicador m
+
+**Passo 1**
+
+* Definir b = a+s
+* Calcular f(a) e f(b)
+* Definir c= b+s
+
+**Passo 2**
+
+* Se f(a)>=f(b), então enquanto f(c)< f(b) atualize:
+  * b=c
+  * f(b)
+  * c = c+s*m
+  * f(c)
+  
+  E ao sair do laço, retorne a e c
+
+* Se f(a)< f(b), então enquanto f(c)< f(a) atualize:
+  * a=c
+  * f(a)=f(c)
+  * s = s*m
+  * c=c-s
+  * f(c)
+  
+  E ao sair do laço, retorne c e b
 
 ## Golden Section Search
 O método elimina intervalos que não sejam possíveis conter o mínimo local até que seja reduzida a distância entre o intervalo e assuma um valor aproximado para o mínimo local. O método também funciona apenas para função unimodal.
@@ -72,11 +105,10 @@ O método elimina intervalos que não sejam possíveis conter o mínimo local at
 
 * Determina dois pontos intermediários c e d tal que: 
    
-   c = b + (b-a)/gr 
+  * c = b + (b-a)/gr 
+  * d = b - (b-a)/gr
 
-   d = b - (b-a)/gr
-
-   Sendo gr a razão áurea.
+  Sendo gr a razão áurea.
 
 **Passo 2**
 
@@ -84,21 +116,17 @@ Avalia f(c) e f(d)
 
 * Se f(c) > f(d), então determine novos a,c,d,b. Repare que o valor de c é calculado com a razão áurea:
 
-   a = d
-   d = c
-   c = a + (b-a)/gr
+  * a = d
+  * d = c
+  * c = a + (b-a)/gr
    
 * Se f(c) < f(d), entao determine novos a,c,d,b. Repare que o valor de d é calculado com razão áurea:
 
-   b=c
-   c=d
-   d= b - (b-a)/gr
+  *  b=c
+  *  c=d
+  *  d= b - (b-a)/gr
 
-   c = x1
-   d = x2
-   xl = a
-   xu = b
-
+  
 **Passo 3**
 
 Se b-a < tolerância, então o extremo local possível é retornado no atual (a+b)/2 e a iteração para, caso contrário, volta ao passo 2
@@ -111,3 +139,12 @@ Assumindo que a função seja quadrática, o método usa o teorema de fermat par
 # Descida do Gradiente
 Método para busca do mínimo local, aplicando a inversa do gradiente da função f. Aplicado para resolução de problemas com várias variáveis. É um método indireto porque não usa o valor f(x) diretamente.
 
+# Força Bruta
+Usado para problemas com várias variáveis, podendo o problema ser inteiro.
+Ele vai permutar entre todos os valores.
+
+Um exemplo de uso é com Caixeiro Viajante
+
+# Algoritmo Guloso
+
+O algoritmo guloso com densidade encontra o valor ótimo do problema da mochila com valores binários
