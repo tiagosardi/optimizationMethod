@@ -8,7 +8,7 @@
 
 <!--ts-->
    * [Sobre](#Sobre)
-   * [Métodos com 1 variável](#Escalares)
+   * [Métodos com 1 variável](#Problemas)
    * [Métodos com várias variáveis](#Vetores)
 <!--te-->
 # Sobre
@@ -22,18 +22,32 @@ Trata-se de algoritmos de busca do mínimo local de uma função.
 ### Features
 
 - [x] Métodos de busca do mínimo local para 1 variável
-- [ ] Métodos de busca do mínimo local com N variáveis
-- [ ] Aplicação
+- [x] Métodos de busca do mínimo local com N variáveis
+- [x] Aplicação
 
+# Definições básicas
 
-# Escalares
+## Função unimodal
+uma função $\displaystyle{f(x)}$ é unimodal se, para algum valor $\displaystyle{m}$, ela cresce monotonamente para $\displaystyle {x}$ $\leq{m}$ e decresce monotonamente para $\displaystyle {x}$ $\geq {m}$. Nesse caso, o valor máximo de $\displaystyle {f(x)}$ é $\displaystyle{f(m)}$ e não existe nenhum outro máximo local.
+
+# Problemas com 1 variável e sem restrições
 
 ## Método Bracketing	
-Dentro de um intervalo [a b] da função, este método começará a percorrer f(m) a partir de a em um passo p enquanto f(m) descrece na função. Então, ao notar que o coeficiente angular mudou, o percurso inverte utilizando um passo menor, a fim de convergir com o mínimo local da função. O método funciona apenas para função unimodal.
+Dentro de um intervalo [a b] da função, este método começará a percorrer a função unimodal $\displaystyle{f(m)}$ a partir de $\displaystyle{a}$ em um passo $\displaystyle{p}$ enquanto $\displaystyle{f(m)}$ descresce na função. Então, ao notar que o coeficiente angular mudou, o percurso inverte utilizando um passo menor, a fim de convergir com o mínimo local da função. O método funciona apenas para função unimodal.
+
+### Vantagem
+Simples de implementar
+
+### Desvantagem
+A taxa de acerto depende do passo.
+
+Se tiver mais de um mínimo, ele vai encontrar algum mínimo, mas nao o melhor
 
 
 ## Golden Section Search
 O método elimina intervalos que não sejam possíveis conter o mínimo local até que seja reduzida a distância entre o intervalo e assuma um valor aproximado para o mínimo local. O método também funciona apenas para função unimodal.
+
+![alt text](http://url/to/img.png)
 
 
 ## Aproximação Quadrática
